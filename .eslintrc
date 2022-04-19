@@ -4,9 +4,21 @@
         "es6": true
     },
     "extends": [
+        "plugin:storybook/recommended",
         "next",
         "next/core-web-vitals",
         "plugin:react/recommended" // Uses the recommended rules from @eslint-plugin-react
+    ],
+    "globals": {
+        "React": "readonly"
+    },
+    "overrides": [
+        {
+            "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+            "rules": {
+                "storybook/hierarchy-separator": "error"
+            }
+        }
     ],
     "rules": {
         "indent": ["warn", 4, { "SwitchCase": 1 }],
