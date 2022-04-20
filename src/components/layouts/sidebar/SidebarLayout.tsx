@@ -1,6 +1,6 @@
 import { Flex, Input, Link } from '@chakra-ui/react';
 import { default as NextLink } from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 export interface ISidebarLayout {}
 
@@ -11,11 +11,18 @@ const menuElements = [
 ];
 
 const SidebarLayout: React.FC<ISidebarLayout> = () => {
+    const [input, setInput] = useState('');
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(e.target.value);
+    };
+
     return (
         <Flex as='nav' h='100%' direction='column' w='250px' bg='#fafafa' p='32px' borderRight='1px solid #eaeaea'>
             <Input
                 type='text'
                 placeholder='Search...'
+                value={input}
+                onChange={handleChange}
                 my='32px'
                 mx='0'
                 textDecoration='none'
