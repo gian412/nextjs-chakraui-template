@@ -22,6 +22,7 @@ const Home: NextPageWithLayout = () => {
                 throw res;
             })
             .then(data => {
+                // eslint-disable-next-line
                 console.log(data);
             })
             .catch(err => {
