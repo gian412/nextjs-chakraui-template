@@ -13,7 +13,7 @@ module.exports = {
         '/src/(.*)': '<rootDir>/src/$1',
     },
 
-    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/cypress/'],
     testEnvironment: 'jsdom',
     transform: {
         /* Use babel-jest to transpile tests with the next/babel preset
@@ -43,6 +43,7 @@ module.exports = {
         '!**/.storybook/**',
         '!**/src/stories/**',
         '!**/coverage/**',
+        '!**/cypress/**',
         '!**/*.d.ts',
         '!**/*.stories.*',
         '!**/*.mocks.*',
