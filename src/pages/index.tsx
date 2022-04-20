@@ -38,7 +38,7 @@ const Home: NextPageWithLayout = () => {
     return (
         <Center as='section'>
             <VStack justifyContent='center' alignContent='center' h='100vh'>
-                <Heading as='h1'>
+                <Heading as='h1' data-cy='home-title'>
                     Welcome to <Link href='https://nextjs.org'>Next.js!</Link>
                 </Heading>
             </VStack>
