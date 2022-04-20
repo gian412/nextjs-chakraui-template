@@ -27,6 +27,7 @@ const Home: NextPageWithLayout = () => {
             })
             .catch(err => {
                 if (err.name !== 'AbortError' && err.status !== 401) {
+                    // eslint-disable-next-line
                     console.error(err);
                 }
             });
