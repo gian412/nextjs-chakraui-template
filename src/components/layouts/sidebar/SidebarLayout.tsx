@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 export interface ISidebarLayout {}
 
 const menuElements = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: 'Home', id: 'home' },
+    { href: '/about', label: 'About', id: 'about' },
+    { href: '/contact', label: 'Contact', id: 'contact' },
 ];
 
 const SidebarLayout: React.FC<ISidebarLayout> = () => {
@@ -37,6 +37,7 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
             {menuElements.map(elem => (
                 <NextLink key={elem.label} href={elem.href} passHref>
                     <Link
+                        id={elem.id}
                         my='8px'
                         mx={0}
                         textDecoration='none'
